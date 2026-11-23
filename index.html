@@ -1,68 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VoyagePH - Your Journey Starts Here</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VoyagePH-Your Journey Starts Here</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <header class="navbar">
+    <div class="nav-link">
+      <button type="button" id="navHomeBtn" class="nav-btn">Home</button>
+      <button type="button" id="navStartBtn" class="nav-btn nav-btn-accent">Plan Trip</button>
+      </nav>
+      </header>
 
-    <header>
-        <nav>
-            <div class="logo">
-                <h1>VoyagePH</h1>
-            </div>
-            <div class = "tagline"> Your Journey Starts Here</div>
-            <ul class="nav-links">
-                <li><a >Destinations</a></li>
-                <li><a >Tours</a></li>
-                <li><a >Contact</a></li>
-            </ul>
-        </nav>
-        </header>
-    <main class = "container">
-        <section id = step1 class ="card">
-            <div class = "card-header">
-                <span class = "badge">Step 1 of 2</span>
-                <h2>Traveler Registration</h2>
-            </div>
-    <form id = "verification-form">
-        <div class = "form-group">
-            <label for = "fullname">Full Name</label>
-            <input type = "text" id = "fullname" placeholder= "e.g. Sunde Valencia" required>
-        </div>
-        <div class = "form-group">
-            <label for = "placeFrom">Place of Origin</label>
-            <input type = "text" id = "placeFrom" placeholder= "e.g. Tokyo, Japan, New Zealand" required>
-        </div>
+      <main class="container">
+        <!--home ni-->
+        <section id="home" class="card hero-bg-card">
+          <img src="c:\Users\user\OneDrive\Desktop\Valencia-website-main\shutterstock_2248395735.webp" alt="PHILIPPINE TRAVEL VIEW" class="hero-bg-img">
+          <div class="hero-overlay">
+            <span class="badge badge-gold">Explore the Untold Beauty of the Philippines</span>
+            <h1 class="hero-title">Discover your next Philippine Paradise</h1>
+            <p class="hero-text">
+              "Experience the Philippines, where every journey brings excitement,
+               every destination brings wonder, and every moment lasts forever.”
+            </p>
+            <button type="button" id="startTripBtn" class="btn btn-primary btn-large">Start Planning My Trip</button>
 
-        <div class = "form-group">
-            <label for = "validId">Upload Valid ID(18+Verification)</label>
-            <input type = "file" id = "validId" accept=".jpg,.jpeg,.png" required>
-        </div>
-
-        <button type = "submit" class = "btn btn-primary">Answer Questions</button>
-    </form>
+          </div>
         </section>
 
+        <!--step1 sign up-->
+        <section id="step1" class="card hidden">
+          <div class="card-header">
+            <span class="badge">Step 1 of 2</span>
+            <h2>Sing In To Plan Your Trip</h2>
+            <p class="step-subtitle">Please sing and verify your ID.</p>
+          </div>
+          <!--for name-->
+        <form id="verification-form">
+          <div class="form-group">
+            <label for="fullName">Full Name</label>
+            <input type="text" id="fullName" placeholder="e.g Sunde Valencia" required/>
+          </div>
 
-    <section id = "step2" class = "card hidden">
-        <div class = "card-header">
-            <span class = "badge badge-accent">Step 2 of 2</span>
-            <h2>Match Your Vacation</h2>
-        </div>
-        
-        <form id = "question-form">
-            <fieldset class = "quiz-group">
-                <legend>1. Who travels with you?</legend>
-                <input type ="radio" name="q1" value="solo" required><span>Solo Traveler </span>
-                
+          <!--place oigin-->
+          <div class="form-group">
+            <label for="placeform">Place of Origin</label>
+            <input type="text" id="placForm" placeholder="e.g.Victoria Street West, Auckland Central, Auckland 1010, New Zealand. 🇳🇿" required/>
+          </div>
 
-            <button type = "submit" class = "btn btn-primary">Submit</button>
+          <div class="form-group">
+            <label for="validId">Upload Valid Id (18+ Verification)</label>
+            <input type="file" id="validID" accept=".jpg,.jpeg,.png" required />
+          </div>
+
+          
+          <p id="formError" class="error-msg hidden">Please fill in all fiealds and upload a valid JPG or PNG ID</p>
+
+          <div class="button-row">
+            <button type="button" id="backHomeBtn" class="btn btn-secondary">Back to Home</button>
+            <button type="submit" class="btn btn-primary">Sign in &amp; Proceed to the Question Form </button>
+          </div>
         </form>
-    </main>
+        </section>
 
-    
+        <!--Questoins-->
+
+        <section id="step2" class="card hidden">
+          <div class="card-header">
+            <span class="badge badge-accent">Step 2 </span>
+            <h2>Match Your Vacation</h2>
+          </div>
+
+        <form id="quiz-form">
+          <fieldset class="quiz-group">
+            <legend>1. Who are you traveling with?</legend>
+          <label class="radio-card"><input type="radio" name="q1" value="solo" required /><span>Solo Traveler</span></label>
+          <label class="radio-card"><input type="radio" name="q1" value="couple" /><span>Couple</span></label>
+          <label class="radio-card"><input type="radio" name="q1" value="family" /><span>Family with Kids</span></label>
+          <label class="radio-card"><input type="radio" name="q1" value="friends_seniors" /><span>Friends / Seniors</span></label>
+          </fieldset>
+
+          <fieldset class="quiz-group">
+          <legend>2. What is your preferred budget style?</legend>
+          <label class="radio-card"><input type="radio" name="q2" value="budget" required /><span>Budget / Backpacker</span></label>
+          <label class="radio-card"><input type="radio" name="q2" value="midrange" /><span>Mid-Range</span></label>
+          <label class="radio-card"><input type="radio" name="q2" value="luxury" /><span>Luxury / Premium</span></label>
+        </fieldset>
+
+        <fieldset class="quiz-group">
+          <legend>3. What experience do you prefer?</legend>
+          <label class="radio-card"><input type="radio" name="q3" value="beaches" required /><span>Tropical Beaches &amp; Island Hopping</span></label>
+          <label class="radio-card"><input type="radio" name="q3" value="nature" /><span>Nature, Waterfalls &amp; Adventure</span></label>
+          <label class="radio-card"><input type="radio" name="q3" value="culture" /><span>Culture, History &amp; Local Food</span></label>
+          <label class="radio-card"><input type="radio" name="q3" value="mountain" /><span>Cool Mountain Escapes</span></label>
+        </fieldset>
+
+        <fieldset class="quiz-group">
+          <legend>4. What are your accessibility needs?</legend>
+          <label class="radio-card"><input type="radio" name="q4" value="standard" required /><span>Standard Walking</span></label>
+          <label class="radio-card"><input type="radio" name="q4" value="senior" /><span>Senior-Friendly</span></label>
+          <label class="radio-card"><input type="radio" name="q4" value="wheelchair" /><span>Wheelchair Friendly</span></label>
+        </fieldset>
+
+        <div class="button-row">
+          <button type="button" id="backBtn" class="btn btn-secondary">Back</button>
+          <button type="submit" class="btn btn-primary">Find My Matches</button>
+        </div>
+      </form>
+    </section>
+
+    <!--step3 result-->
+    <section id="results" class="card hidden">
+      <div class="card-header">
+        <span class="badge badge-gold">Top Recommendations</span>
+        <h2 id="destanationTitle">Your Recommended Getways</h2>
+        <p id="welcomeMessage"></p>
+      </div>
+
+      <div id="resultsContent" class="destinations-grid"></div>
+
+      <button type="button" id="restartBtn" class="btn btn-primary restart-btn">Back to Home</button>
+    </section>
+
+
+      </main>
+      <script scr="script.js"></script>
+
+  
+  
 </body>
 </html>
