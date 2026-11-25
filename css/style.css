@@ -58,7 +58,7 @@ body {
   padding: 0.45rem 1rem;
   border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 6px;
-  background: transparent;
+  background-color: var(--gold);
   color: #fff;
   font-weight: bold;
   cursor: pointer;
@@ -71,18 +71,13 @@ body {
 }
 
 .nav-btn-accent {
-  background: var(--peach);
+  background: var(--rose);
   border-color: var(--peach);
 }
 
 /* Main Layout & Cards */
-.container {
-  position: relative;
-  z-index: 2;
-  max-width: 850px;
-  margin: 2rem auto;
-  padding: 0 1rem;
-}
+
+
 
 .card {
   background: #fff;
@@ -123,10 +118,10 @@ body {
   inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: center;
   z-index: 1;
 }
-
+/*shodw*/
 .hero-bg-card::after {
   content: "";
   position: fixed;
@@ -185,66 +180,6 @@ body {
   text-shadow: none;
 }
 
-/* Forms & Quiz */
-.form-group,
-.quiz-group {
-  margin-bottom: 1.3rem;
-  border: none;
-}
-
-.form-group label,
-.quiz-group legend {
-  display: block;
-  font-weight: bold;
-  color: var(--purple);
-  margin-bottom: 0.5rem;
-}
-
-.form-group input[type="text"],
-.form-group input[type="file"] {
-  width: 100%;
-  padding: 0.75rem 1rem;
-  border: 2px solid #dcd5cb;
-  border-radius: 8px;
-  background: #fafafa;
-  font-size: 1rem;
-}
-
-.form-group input:focus {
-  outline: none;
-  border-color: var(--teal);
-}
-
-.error-msg {
-  color: var(--rose);
-  font-size: 0.9rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
-}
-
-.radio-card {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  padding: 0.75rem 1rem;
-  margin-bottom: 0.6rem;
-  background: var(--cream);
-  border: 2px solid #e6e0d5;
-  border-radius: 8px;
-  font-weight: 600;
-  cursor: pointer;
-}
-
-.radio-card:hover {
-  border-color: var(--peach);
-  background: #fffdf9;
-}
-
-.radio-card input[type="radio"] {
-  width: 18px;
-  height: 18px;
-  accent-color: var(--teal);
-}
 
 /* Buttons */
 .btn {
@@ -280,70 +215,20 @@ body {
   color: #fff;
 }
 
-.btn-large {
-  padding: 0.95rem 2rem;
-  font-size: 1.05rem;
-}
 
-.restart-btn {
-  margin-top: 2rem;
-}
 
-.button-row {
-  display: flex;
-  justify-content: space-between;
-  gap: 1rem;
-  margin-top: 1.5rem;
-}
 
-.hidden {
-  display: none;
-}
 
-/* Results Grid */
-.destinations-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.5rem;
-  margin-top: 1.25rem;
-}
 
-.destination-card {
-  display: flex;
-  flex-direction: column;
-  background: #fff;
-  border: 1px solid #e2dcd3;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-}
 
-.destination-card img {
-  width: 100%;
-  height: 190px;
-  object-fit: cover;
-  display: block;
-}
 
-.destination-card .card-body {
-  display: flex;
-  flex-direction: column;
-  gap: 0.45rem;
-  flex-grow: 1;
-  padding: 1rem;
-}
 
-.destination-card h3 {
-  color: var(--purple);
-}
 
-.destination-card p {
-  font-size: 0.95rem;
-  color: #4a4a4a;
-}
 
-.price-tag {
-  margin-top: auto;
-  font-weight: bold;
-  color: var(--teal);
-}
+
+
+
+
+
+
+
